@@ -18,13 +18,13 @@
     margin: 0;
   }
 
-  #intro {
+  #intro, #next{
     text-align: center;
   }
-  #intro > div {
+  #intro > div, #next > div{
     padding-top: 24px;
   }
-  .csstransforms #intro > div {
+  .csstransforms #intro > div, .csstransforms #next > div {
     padding-top: 0;
     position: absolute;
     top: 50%;
@@ -36,7 +36,7 @@
     -o-transform: translate(0, -50%);
     transform: translate(0, -50%);
   }
-  #intro h1 {
+  #intro h1, #next h1 {
     position: static;
     font-size: 84px;
     font-weight: normal;
@@ -51,17 +51,17 @@
     color: #000;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
   }
-  #intro h2 {
+  #intro h2, #next h2 {
     font-size: 24px;
     letter-spacing: 2px;
     color: #999;
     font-weight: 100;
     text-shadow: 1px 1px 1px #fff;
   }
-  #intro hgroup {
+  #intro hgroup, #next hgroup {
     margin-bottom: 32px;
   }
-  #intro p {
+  #intro p, #next p {
     padding-bottom: 10px;
   }
 
@@ -110,7 +110,7 @@
     background: #83b5b5;
   }
 
-  #sample > pre {
+  #good-cop > pre {
     border: 1px solid #ddd;
     padding: 10px;
     background: #fff;
@@ -122,7 +122,7 @@
     width: 435px;
     margin: 32px 0 16px 30px;
   }
-  #sample > pre:before {
+  #good-cop > pre:before {
     position: absolute;
     content: "";
     z-index: -2;
@@ -136,10 +136,10 @@
     -moz-border-radius: 10px/150px;
     border-radius: 10px/150px;
   }
-  #sample > pre > code {
+  #good-cop > pre > code {
     color: #aaa;
   }
-  #sample > h2 {
+  #good-cop > h2 {
     font-family: "UltraRegular", Georgia, serif;
     font-weight: normal;
     font-size: 36px;
@@ -147,27 +147,27 @@
     color: #000;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
   }
-  #sample .deck-previous, #sample .deck-before {
+  #good-cop .deck-previous, #good-cop .deck-before {
     color: #aaa;
   }
-  #sample .deck-current {
+  #good-cop .deck-current {
     color: #444;
   }
 
-  .sample-content {
+  .good-cop-content {
     overflow: hidden;
     zoom: 1;
     font-size: 22px;
     text-shadow: 1px 1px 1px #fff;
   }
-  .sample-content > p {
+  .good-cop-content > p {
     margin-bottom: 1em;
   }
-  .sample-content a {
+  .good-cop-content a {
     color: #599;
     text-decoration: none;
   }
-  .sample-content a:hover, .sample-content a:focus {
+  .good-cop-content a:hover, .good-cop-content a:focus {
     text-decoration: underline;
   }
 
@@ -363,7 +363,7 @@
     border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
   }
 
-  #now-what > h2 {
+  #bad-cop > h2 {
     font-family: "UltraRegular", Georgia, serif;
     font-weight: normal;
     font-size: 36px;
@@ -374,7 +374,7 @@
     position: relative;
     z-index: 3;
   }
-  #now-what > h2:after {
+  #bad-cop > h2:after {
     content: "";
     width: 1px;
     height: 24px;
@@ -384,13 +384,13 @@
     bottom: 0;
     background: #ddd;
   }
-  #now-what > p {
+  #bad-cop > p {
     padding: 42px 0 16px 0;
     text-align: center;
     position: relative;
     z-index: 2;
   }
-  #now-what > p:after {
+  #bad-cop > p:after {
     content: "";
     width: 1px;
     height: 32px;
@@ -400,7 +400,7 @@
     top: 0;
     background: #ddd;
   }
-  #now-what > p .download {
+  #bad-cop > p .download {
     font-size: 36px;
     padding: 10px 16px;
     -webkit-border-radius: 6px;
@@ -460,14 +460,14 @@
     padding-bottom: 0;
   }
 
-  .on-slide-0 #sample > pre > code, .on-slide-1 #sample > pre > code {
+  .on-slide-0 #good-cop > pre > code, .on-slide-1 #good-cop > pre > code {
     color: #fff;
   }
 
-  .on-slide-1 #sample pre {
+  .on-slide-1 #good-cop pre {
     position: relative;
   }
-  .on-slide-1 #sample pre:after {
+  .on-slide-1 #good-cop pre:after {
     content: "Use arrow keys to navigate";
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
     color: #aaa;
@@ -482,11 +482,11 @@
     right: 0;
     text-align: center;
   }
-  .touch .on-slide-1 #sample pre:after {
+  .touch .on-slide-1 #good-cop pre:after {
     content: "Swipe left/right to navigate";
   }
 
-  .on-slide-2 #sample > pre > code {
+  .on-slide-2 #good-cop > pre > code {
     color: #333;
   }
 
@@ -559,33 +559,34 @@
     -o-transition: -o-transform 300ms ease-in-out 200ms;
     transition: transform 300ms ease-in-out 200ms;
   }
-  .csstransforms.csstransitions #sample.deck-next, .csstransforms.csstransitions #sample.deck-before:not(.deck-child-current) {
+  .csstransforms.csstransitions #good-cop.deck-next, .csstransforms.csstransitions #good-cop.deck-before:not(.deck-child-current) {
     left: 0;
     top: 0;
     right: 0;
   }
-  .csstransforms.csstransitions #sample.deck-next h2, .csstransforms.csstransitions #sample.deck-next pre, .csstransforms.csstransitions #sample.deck-next .sample-content, .csstransforms.csstransitions #sample.deck-before:not(.deck-child-current) h2, .csstransforms.csstransitions #sample.deck-before:not(.deck-child-current) pre, .csstransforms.csstransitions #sample.deck-before:not(.deck-child-current) .sample-content {
+  .csstransforms.csstransitions #good-cop.deck-next h2, .csstransforms.csstransitions #good-cop.deck-next pre, .csstransforms.csstransitions #good-cop.deck-next .good-cop-content, .csstransforms.csstransitions #good-cop.deck-before:not(.deck-child-current) h2, .csstransforms.csstransitions #good-cop.deck-before:not(.deck-child-current) pre, .csstransforms.csstransitions #good-cop.deck-before:not(.deck-child-current) .good-cop-content {
     -webkit-transform: translate3d(0, -300%, 0);
     -moz-transform: translate(0, -300%);
     -ms-transform: translate(0, -300%);
     -o-transform: translate(0, -300%);
     transform: translate3d(0, -300%, 0);
   }
-  .csstransforms.csstransitions #sample h2, .csstransforms.csstransitions #sample .sample-content {
+  .csstransforms.csstransitions #good-cop h2, .csstransforms.csstransitions #good-cop .good-cop-content {
     -webkit-transition: -webkit-transform 300ms ease-in-out 200ms;
     -moz-transition: -moz-transform 300ms ease-in-out 200ms;
     -ms-transition: -ms-transform 300ms ease-in-out 200ms;
     -o-transition: -o-transform 300ms ease-in-out 200ms;
     transition: transform 300ms ease-in-out 200ms;
   }
-  .csstransforms.csstransitions #sample pre {
+  .csstransforms.csstransitions #good-cop pre {
     -webkit-transition: -webkit-transform 300ms ease-in-out;
     -moz-transition: -moz-transform 300ms ease-in-out;
     -ms-transition: -ms-transform 300ms ease-in-out;
     -o-transition: -o-transform 300ms ease-in-out;
     transition: transform 300ms ease-in-out;
   }
-  .csstransforms.csstransitions #sample .slide {
+  .csstransforms.csstransitions #bad-cop .slide,
+  .csstransforms.csstransitions #good-cop .slide {
     visibility: visible;
     opacity: 0;
     -webkit-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
@@ -594,7 +595,8 @@
     -o-transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
     transition: color 300ms ease-in-out, opacity 300ms ease-in-out;
   }
-  .csstransforms.csstransitions #sample .deck-current, .csstransforms.csstransitions #sample .deck-before, .csstransforms.csstransitions #sample .deck-previous {
+  .csstransforms.csstransitions #bad-cop .deck-current, .csstransforms.csstransitions #bad-cop .deck-before, .csstransforms.csstransitions #bad-cop .deck-previous,
+  .csstransforms.csstransitions #good-cop .deck-current, .csstransforms.csstransitions #good-cop .deck-before, .csstransforms.csstransitions #good-cop .deck-previous {
     opacity: 1;
   }
   .csstransforms.csstransitions .on-slide-4 .example-current, .csstransforms.csstransitions .on-slide-4 .example-next, .csstransforms.csstransitions .on-slide-5 .example-current, .csstransforms.csstransitions .on-slide-5 .example-next, .csstransforms.csstransitions .on-slide-6 .example-current, .csstransforms.csstransitions .on-slide-6 .example-next, .csstransforms.csstransitions .on-slide-7 .example-current, .csstransforms.csstransitions .on-slide-7 .example-next {
@@ -631,26 +633,26 @@
     -o-transform: scale(1);
     transform: scale(1);
   }
-  .csstransforms.csstransitions #now-what.deck-next, .csstransforms.csstransitions #now-what.deck-after {
+  .csstransforms.csstransitions #bad-cop.deck-next, .csstransforms.csstransitions #bad-cop.deck-after {
     left: 0;
     top: 0;
     right: 0;
   }
-  .csstransforms.csstransitions #now-what.deck-next .personas, .csstransforms.csstransitions #now-what.deck-after .personas {
+  .csstransforms.csstransitions #bad-cop.deck-next .personas, .csstransforms.csstransitions #bad-cop.deck-after .personas {
     -webkit-transform: translate3d(-300%, 0, 0);
     -moz-transform: translate(-300%, 0);
     -ms-transform: translate(-300%, 0);
     -o-transform: translate(-300%, 0);
     transform: translate3d(-300%, 0, 0);
   }
-  .csstransforms.csstransitions #now-what.deck-next h2, .csstransforms.csstransitions #now-what.deck-after h2 {
+  .csstransforms.csstransitions #bad-cop.deck-next h2, .csstransforms.csstransitions #bad-cop.deck-after h2 {
     -webkit-transform: translate3d(0, -1000%, 0);
     -moz-transform: translate(0, -1000%);
     -ms-transform: translate(0, -1000%);
     -o-transform: translate(0, -1000%);
     transform: translate3d(0, -1000%, 0);
   }
-  .csstransforms.csstransitions #now-what .personas .slide {
+  .csstransforms.csstransitions #bad-cop .personas .slide {
     visibility: visible;
     -webkit-transition: opacity 200ms ease-in-out 0ms;
     -moz-transition: opacity 200ms ease-in-out 0ms;
@@ -658,17 +660,17 @@
     -o-transition: opacity 200ms ease-in-out 0ms;
     transition: opacity 200ms ease-in-out 0ms;
   }
-  .csstransforms.csstransitions #now-what .personas .slide.deck-next, .csstransforms.csstransitions #now-what .personas .slide.deck-after {
+  .csstransforms.csstransitions #bad-cop .personas .slide.deck-next, .csstransforms.csstransitions #bad-cop .personas .slide.deck-after {
     opacity: 0;
   }
-  .csstransforms.csstransitions #now-what .personas, .csstransforms.csstransitions #now-what h2 {
+  .csstransforms.csstransitions #bad-cop .personas, .csstransforms.csstransitions #bad-cop h2 {
     -webkit-transition: -webkit-transform 300ms ease-in-out;
     -moz-transition: -moz-transform 300ms ease-in-out;
     -ms-transition: -ms-transform 300ms ease-in-out;
     -o-transition: -o-transform 300ms ease-in-out;
     transition: transform 300ms ease-in-out;
   }
-  .csstransforms.csstransitions #now-what > p {
+  .csstransforms.csstransitions #bad-cop > p {
     left: 0;
     top: 0;
     visibility: visible;
@@ -679,16 +681,85 @@
     -o-transition: opacity 300ms ease-in-out 0ms;
     transition: opacity 300ms ease-in-out 0ms;
   }
-  .csstransforms.csstransitions #now-what > p.deck-current {
+  .csstransforms.csstransitions #bad-cop > p.deck-current {
     opacity: 1;
   }
-  .csstransforms.csstransitions .on-slide-10 #now-what .personas, .csstransforms.csstransitions .on-slide-10 #now-what h2 {
+  .csstransforms.csstransitions .on-slide-10 #bad-cop .personas, .csstransforms.csstransitions .on-slide-10 #bad-cop h2 {
     -webkit-transition-delay: 200ms;
     -moz-transition-delay: 200ms;
     -ms-transition-delay: 200ms;
     -o-transition-delay: 200ms;
     transition-delay: 200ms;
   }
+
+
+
+
+
+
+
+
+
+/* Comme and lean the good parts and the bad parts */
+
+  .csstransforms.csstransitions #next.deck-next, .csstransforms.csstransitions #next.deck-after {
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+  .csstransforms.csstransitions #next.deck-next h1, .csstransforms.csstransitions #next.deck-after h1,
+  .csstransforms.csstransitions #next.deck-next h2, .csstransforms.csstransitions #next.deck-after h2 {
+    -webkit-transform: translate3d(0, -2000%, 0);
+    -moz-transform: translate(0, -2000%);
+    -ms-transform: translate(0, -2000%);
+    -o-transform: translate(0, -2000%);
+    transform: translate3d(0, -2000%, 0);
+  }
+  .csstransforms.csstransitions #next .personas, .csstransforms.csstransitions #next h1,
+  .csstransforms.csstransitions #next .personas, .csstransforms.csstransitions #next h2 {
+    -webkit-transition: -webkit-transform 300ms ease-in-out;
+    -moz-transition: -moz-transform 300ms ease-in-out;
+    -ms-transition: -ms-transform 300ms ease-in-out;
+    -o-transition: -o-transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
+  }
+  .csstransforms.csstransitions .on-slide-10 #next .personas, .csstransforms.csstransitions .on-slide-10 #next h1,
+  .csstransforms.csstransitions .on-slide-10 #next .personas, .csstransforms.csstransitions .on-slide-10 #next h2 {
+    -webkit-transition-delay: 200ms;
+    -moz-transition-delay: 200ms;
+    -ms-transition-delay: 200ms;
+    -o-transition-delay: 200ms;
+    transition-delay: 200ms;
+  }
+
+
+
+
+
+/* Good cop */
+
+.csstransforms.csstransitions .on-slide-15 #good-cop {
+    -webkit-transform: translate3d(-200%, 0, 0);
+    -moz-transform: translate(-200%, 0);
+    -ms-transform: translate(-200%, 0);
+    -o-transform: translate(-200%, 0);
+    transform: translate3d(-200%, 0, 0);
+}
+
+.csstransforms.csstransitions .on-slide-15 #bad-cop {
+    -webkit-transform: translate3d(200%, 0, 0);
+    -moz-transform: translate(200%, 0);
+    -ms-transform: translate(200%, 0);
+    -o-transform: translate(200%, 0);
+    transform: translate3d(200%, 0, 0);
+}
+
+
+
+
+
+
+
 
   .pointerevents.csstransforms.csstransitions .deck-current {
     z-index: auto;
@@ -707,86 +778,5 @@
   .slide .slide {
     min-height: 0;
     height: auto;
-  }
-}
-@media print {
-  * {
-    background: transparent !important;
-    color: black !important;
-  }
-
-  a, a:visited {
-    text-decoration: none;
-  }
-
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  @page {
-    margin: 0.5cm;
-}
-
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2, h3 {
-    page-break-after: avoid;
-  }
-
-  header, footer, #intro p, .goto-form, .deck-prev-link, .deck-next-link, .deck-status {
-    display: none;
-  }
-
-  article {
-    width: auto !important;
-    font-size: 12pt;
-  }
-  article > .slide {
-    page-break-after: always;
-  }
-
-  #intro {
-    text-align: center;
-  }
-  #intro h1 {
-    font-family: "UltraRegular", Georgia, sans-serif;
-    font-size: 90pt;
-  }
-  #intro h2 {
-    font-size: 24pt;
-  }
-
-  #sample pre {
-    padding: 5px;
-    width: 75%;
-  }
-  #sample h2 {
-    font-family: "UltraRegular", Georgia, sans-serif;
-    font-size: 24pt;
-    margin: .5em 0;
-  }
-  #sample p {
-    margin: 1em 0;
-    width: 75%;
-  }
-  #sample span {
-    display: inline !important;
-  }
-
-  #now-what h2 {
-    font-family: "UltraRegular", Georgia, sans-serif;
-    font-size: 24pt;
-    margin: .5em 0 .25em 0;
-  }
-  #now-what p {
-    margin: .25em 0 1em 0;
-    width: 75%;
-  }
-  #now-what a {
-    display: none;
   }
 }
